@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    
+    
+    <button  onclick="Get()">Get</button>
+    <button onclick="Post()">Post</button>
+    <button onclick="Put()">put</button>
+    <button onclick="Del()">Delete</button>
+    
+    <script>
+function Get() {
+
+    
+    const Http = new XMLHttpRequest();
+    const url='http://192.168.50.177:3000/bulb';
+    Http.open("GET", url);
+    Http.send();
+    
+    Http.onreadystatechange = (e) => {
+      console.log(Http.responseText)
+    }
+
+}
+
+function Post() {
+
+    
+const Http = new XMLHttpRequest();
+const url='http://192.168.50.177:3000/bulb';
+Http.open("POST", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+}
+
+}
+function Put() {
+
+    
+const Http = new XMLHttpRequest();
+const url='http://192.168.50.177:3000/bulb';
+Http.open("PUT", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+}
+
+}
+
+function Del() {
+
+    
+const Http = new XMLHttpRequest();
+const url='http://192.168.50.177:3000/bulb';
+Http.open("DELETE", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
